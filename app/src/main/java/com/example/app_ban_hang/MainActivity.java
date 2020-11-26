@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 dr_layout.openDrawer(Gravity.START);
             }
         });
-        System.out.println("sadasda");
+       
 
     }
 
