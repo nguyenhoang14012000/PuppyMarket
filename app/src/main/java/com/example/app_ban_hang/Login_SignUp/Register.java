@@ -1,4 +1,4 @@
-package com.example.puppystore;
+package com.example.app_ban_hang.Login_SignUp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app_ban_hang.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -35,7 +36,7 @@ public class Register extends AppCompatActivity {
         mRegisterbtn=findViewById(R.id.btn_register);
         mCancelbtn=findViewById(R.id.btn_sign_up_cancle);
 
-        fAuth=FirebaseAuth.getInstance();
+        fAuth= FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
 
 //        if (fAuth.getCurrentUser()!=null){
@@ -81,7 +82,7 @@ public class Register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(Register.this,"User Created.",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),MainLogin.class));
                         }
                         else{
                             Toast.makeText(Register.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
@@ -93,7 +94,7 @@ public class Register extends AppCompatActivity {
         mCancelbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),MainLogin.class));
             }
         });
 

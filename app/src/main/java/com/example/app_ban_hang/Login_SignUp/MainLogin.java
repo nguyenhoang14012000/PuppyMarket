@@ -1,4 +1,4 @@
-package com.example.puppystore;
+package com.example.app_ban_hang.Login_SignUp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.app_ban_hang.R;
+
+public class MainLogin extends AppCompatActivity {
    Button mSignin,mSignup ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
