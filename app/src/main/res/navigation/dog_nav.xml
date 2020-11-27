@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dog_nav"
+    app:startDestination="@id/DetailFragment">
+
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="com.huynhchinh.dogmarket.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/activity_individual_product" >
+        <action
+            android:id="@+id/action_detail_to_checkout"
+            app:destination="@id/CheckoutFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_detailsFragment"
+            app:destination="@id/CheckoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CheckoutFragment"
+        android:name="com.huynhchinh.dogmarket.CheckoutFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/activity_order_details" >
+        <action
+            android:id="@+id/action_details_to_list"
+            app:destination="@id/DetailFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_listFragment"
+            app:destination="@id/DetailFragment" />
+    </fragment>
+</navigation>
