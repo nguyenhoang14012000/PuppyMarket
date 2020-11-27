@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    MyDatabaseHelperInfor  myDatabaseHelperInfor;
+    MyDatabaseHelper myDatabaseHelperInfor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myDatabaseHelperInfor = new MyDatabaseHelperInfor(this);
+        myDatabaseHelperInfor = new MyDatabaseHelper(this);
     }
 }
